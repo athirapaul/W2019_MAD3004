@@ -16,3 +16,8 @@ h.login(userId: "bobjohn",password: "cvfcb")
 
 h.updateProfile(customerName:" athira", address: "a", email: "ghfh", creditCardInfo: "hgc", shippingInfo: "Bluedart")
 print(h)
+var  j = ShoppingCart(cartId : 1 , productId : 2, quantity : 5 , dateAdded : 12)
+j.addCartItem()
+j.updateQuantity(cartId : 1,productId : 2, quantity: 10, dateAdded : 12)
+j.viewCartDetails(cartId: <#T##Int#>, productId: <#T##Int#>, quantity: <#T##Int#>, dateAdded: <#T##Int#>)
+

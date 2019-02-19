@@ -19,14 +19,39 @@ class ShoppingCart{
         self.dateAdded = Int()
     }
     func addCartItem(){
+        print("  Enter cartId :\(cartId)")
+        print(" Enter productId  :\(productId)")
+        print(" Enter quantity :\(quantity)")
+        print(" Enter dateAdded :\( dateAdded)")
+        print("Items Added successfully to the cart")
         
     }
-    func updateQuantity(){
+    func updateQuantity(cartId: Int,productId: Int,quantity:Int,dateAdded: Int){
+        if((cartId != self.cartId)||(productId != self.productId)||(quantity != self.quantity)||(dateAdded != self.dateAdded)){
+            self.cartId = cartId
+            self.productId = productId
+            self.quantity = quantity
+            self.dateAdded = dateAdded
+            print("  Enter cartId :\(self.cartId)")
+            print(" Enter productId  :\(self.productId)")
+            print("quantity:\(self.quantity)")
+            print(" Enter dateAdded :\(self.dateAdded)")
+            print("Updated successfully")
+        }
         
     }
-    func viewCartDetails(){
+    func viewCartDetails(cartId: Int,productId: Int,quantity:Int,dateAdded: Int){
         
-    }
+        self.cartId = cartId
+        self.productId = productId
+        self.quantity = quantity
+        self.dateAdded = dateAdded
+        print("  Enter cartId :\(self.cartId)")
+        print(" Enter productId  :\(self.productId)")
+        print("quantity:\(self.quantity)")
+        print(" Enter dateAdded :\(self.dateAdded)")
+        
+        
     func checkOut(){
         
     }
