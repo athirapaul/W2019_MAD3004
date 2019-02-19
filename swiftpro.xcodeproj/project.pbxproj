@@ -13,7 +13,6 @@
 		DD2A0D2122162B6800D6B193 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2A0D2022162B6800D6B193 /* User.swift */; };
 		DD2A0D2B22164D4500D6B193 /* Administrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2A0D2A22164D4500D6B193 /* Administrator.swift */; };
 		DD2A0D2D2216510A00D6B193 /* shippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2A0D2C2216510A00D6B193 /* shippingInfo.swift */; };
-		DD2A0D2F2216515400D6B193 /* iDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2A0D2E2216515400D6B193 /* iDisplay.swift */; };
 		DD2B3BB12217C86700E13FC6 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2B3BB02217C86700E13FC6 /* Items.swift */; };
 		DD2C05022215EC0A009B5BF2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2C05012215EC0A009B5BF2 /* main.swift */; };
 		DD3C6EBF22160E3D00913577 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C6EBE22160E3D00913577 /* Customer.swift */; };
@@ -38,7 +37,6 @@
 		DD2A0D2022162B6800D6B193 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD2A0D2A22164D4500D6B193 /* Administrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Administrator.swift; sourceTree = "<group>"; };
 		DD2A0D2C2216510A00D6B193 /* shippingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shippingInfo.swift; sourceTree = "<group>"; };
-		DD2A0D2E2216515400D6B193 /* iDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDisplay.swift; sourceTree = "<group>"; };
 		DD2B3BB02217C86700E13FC6 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		DD2C04FE2215EC0A009B5BF2 /* swiftpro */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swiftpro; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2C05012215EC0A009B5BF2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -63,14 +61,6 @@
 			);
 			name = Customer;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		DD2B3BA92217C77E00E13FC6 /* iDisplay */ = {
-			isa = PBXGroup;
-			children = (
-				DD2A0D2E2216515400D6B193 /* iDisplay.swift */,
-			);
-			path = iDisplay;
 			sourceTree = "<group>";
 		};
 		DD2B3BAA2217C79600E13FC6 /* User */ = {
@@ -155,7 +145,6 @@
 				DD2B3BAD2217C7DA00E13FC6 /* Order Details */,
 				DD2B3BAC2217C7BE00E13FC6 /* Shopping Info */,
 				DD2B3BAA2217C79600E13FC6 /* User */,
-				DD2B3BA92217C77E00E13FC6 /* iDisplay */,
 				DD2B3BA82217C76300E13FC6 /* Customer */,
 				DD2C05012215EC0A009B5BF2 /* main.swift */,
 			);
@@ -226,7 +215,6 @@
 				DD2A0D2122162B6800D6B193 /* User.swift in Sources */,
 				DD2A0D2B22164D4500D6B193 /* Administrator.swift in Sources */,
 				DD2B3BB12217C86700E13FC6 /* Items.swift in Sources */,
-				DD2A0D2F2216515400D6B193 /* iDisplay.swift in Sources */,
 				DD28D0B8221666A10044B2D3 /* Orders.swift in Sources */,
 				DD2A0D2D2216510A00D6B193 /* shippingInfo.swift in Sources */,
 			);
