@@ -7,18 +7,20 @@
 //
 
 import Foundation
-class ShoppingCart{
+/*class ShoppingCart : Product {
  private    var cartId :Int
    private  var productId :Int
    private  var quantity:Int
   private   var dateAdded:Int
-    init(){
+    override init(){
         self.cartId = Int()
         self.productId = Int()
         self.quantity = Int()
         self.dateAdded = Int()
+        super.init()
+       
     }
-    func addCartItem(){
+    func addCartItem(Product1:String) {
         
     }
     func updateQuantity(){
@@ -30,4 +32,5 @@ class ShoppingCart{
     func checkOut(){
         
     }
-}
+}*/
+
