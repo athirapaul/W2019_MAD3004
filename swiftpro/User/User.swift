@@ -29,7 +29,7 @@ class User {
        // self.customerName = readLine()!
         
     }
-    func verifyLogin(userID:String,password:String) -> Bool {
+    func verifyLogin(userId:String,password:String) -> Bool {
         if(self.userId==userId && self.password==password){
             return true
         }

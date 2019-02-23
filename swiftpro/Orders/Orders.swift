@@ -40,9 +40,9 @@ class Order:IDisplay {
   private   var dateCreated:Date
    private  var dateShipped:Date
   private  var customerName:String
-  private   var customerId:String
+  private   var customerId:Int
    private  var status:String
-  private   var shippingId:String
+  private   var shippingId:Int
     lazy var arrayProducts:[Product] = [Product]()
     //Computed Property : Order Total
     var orderTotal:Float{
@@ -54,8 +54,18 @@ class Order:IDisplay {
     }
     //DICTIONARY ORDERS
     private static var dictOrders=[Int:Order]()
-    
-init(orderId:Int,dateCreated: Date,dateShipped:Date,customerName:String,customerId:String,status:String,shippingId:String,arrayProducts:[Product]) {
+    init()
+    {
+        self.orderId = Int()
+        self.dateCreated = Date()
+        self.dateShipped = Date()
+        self.customerId = Int()
+        self.customerName  = String()
+        self.status = String()
+        self.shippingId = Int()
+        self.arrayProducts = [Product]()
+    }
+init(orderId:Int,dateCreated: Date,dateShipped:Date,customerName:String,customerId:Int,status:String,shippingId:Int,arrayProducts:[Product]) {
         self.orderId = orderId
         self.dateCreated = dateCreated
         self.dateShipped = dateShipped

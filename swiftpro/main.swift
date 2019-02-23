@@ -15,19 +15,21 @@ var p1 = Product.init(productId: 200, productName: "Necklace", price: 20.50, qua
 var p2 = Product.init(productId: 201, productName: "Ring", price: 50.00, quantity: 5)
 var p3 = Product.init(productId: 200, productName: "Anklet", price: 75.25, quantity: 1)
 
-//var l = Customer(userId: "123", password: "4556", loginStatus: "5678")
-h.login(userId: "bobjohn",password: "bobjohn")
-
-h.updateProfile(customerName:" athira", address: "a", email: "ghfh", creditCardInfo: "hgc", shippingInfo: "Bluedart")
+h.needtologin()
 print(h)
-var a = Administrator(adminName: "chinnu", email: "chinnu@gmail.com", update: true, adminuserId: "chinnu", adminpassword: "chinnu")
+//var l = Customer(userId: "123", password: "4556", loginStatus: "5678")
+//h.login(userId: "",password: "")
 
-a.updateCatalog(adminuserId: "chinnu", adminpassword: "chinnu")
-print(a)
+var up = h.updateProfile
+print(up)
+//var a = Administrator(adminName: "chinnu", email: "chinnu@gmail.com", update: true, adminuserId: "chinnu", adminpassword: "chinnu")
+
+//a.updateCatalog(adminuserId: "chinnu", adminpassword: "chinnu")
+//print(a)
 //var p = Product()
 //p.chooseProduct(Product1: "Anklet")
 //print(p)
 
-var o1 = Order.init(orderId: 1, dateCreated: Date(), dateShipped: Date(), customerName: "Athira", customerId: "1", status: "order placed", shippingId: "1", arrayProducts: [p1,p2,p3])
+var o1 = Order.init(orderId: 1, dateCreated: Date(), dateShipped: Date(), customerName: "athira", customerId: 1, status: "order placed", shippingId: 1, arrayProducts: [p1,p2,p3])
 o1.printDetails()
 //qqvar o2 = Order.init(orderId: <#T##Int#>, dateCreated: <#T##Date#>, dateShipped: <#T##Date#>, customerName: <#T##String#>, customerId: <#T##String#>, status: <#T##String#>, shippingId: <#T##String#>, arrayProducts: <#T##[Product]#>)
