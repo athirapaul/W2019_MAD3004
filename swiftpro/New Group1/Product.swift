@@ -57,10 +57,10 @@ var quantity : Int
 }
     
 }*/
-class Product : Customer {
+class Product  {
     
-    let productId:Int?
-    private var productName:String?
+    var productId:Int?
+    var productName:String?
     var getProductName:String?
     {
         get{
@@ -83,9 +83,9 @@ class Product : Customer {
         }
     }
     
-    init(customerId:Int, customerName:String,productId:Int,productName:String,price:Float,quantity:Int) {
+    init(productId:Int,productName:String,price:Float,quantity:Int) {
         self.productId = productId
-        super.init(customerId: customerId, customerName: customerName)
+       // super.init(customerId: customerId, customerName: customerName)
         
         self.productName = productName
         self.price = price
@@ -96,9 +96,9 @@ class Product : Customer {
         self.quantity = self.quantity! + newQuantity
     }
     
-    override func printDetails()
+    func printDetails()
     {
-        print(self.manufacturerId!, self.manufacturerName!,self.productId!,self.productName!,self.price!.currency(), self.quantity!.unit(), separator:"\t")
+        print(self.productId!,self.productName!,self.price!.currency(), self.quantity!.unit(), separator:"\t")
         
     }
 }

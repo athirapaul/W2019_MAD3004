@@ -24,7 +24,11 @@ class User {
         self.password = password
         self.loginStatus = loginStatus
     }
-    
+    func toContinue(){
+        print("Do you want to login? ")
+       // self.customerName = readLine()!
+        
+    }
     func verifyLogin(userID:String,password:String) -> Bool {
         if(self.userId==userId && self.password==password){
             return true

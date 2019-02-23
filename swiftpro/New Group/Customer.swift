@@ -27,7 +27,7 @@ private var shippingInfo : String
         self.shippingInfo = String()
         super.init()
     }
-    init(userId:String,password:String,customerName:String,address:String,email:String,creditCardInfo:String,shippingInfo:String){
+    /*init(userId:String,password:String,customerName:String,address:String,email:String,creditCardInfo:String,shippingInfo:String){
         
         self.customerName = customerName
         self.address = address
@@ -36,10 +36,13 @@ private var shippingInfo : String
         self.shippingInfo = shippingInfo
         super.init(userId: userId,password: password,loginStatus: "C")
     
-    }
+    }*/
     func register() {
+          print("Welcome to the world of shopping ")
+        
         print("Enter customer Name ")
         self.customerName = readLine()!
+        
         print("Enter Address  :")
          self.address = readLine()!
         print("Enter Email Id :")
@@ -49,7 +52,7 @@ private var shippingInfo : String
         print("Enter Shipping Info :")
         self.shippingInfo = readLine()!
         print("\(customerName)\(address)\(email)\(creditCardInfo)\(shippingInfo)\nRegistration successful")
-       self.address = readLine()!
+       //self.address = readLine()!
     }
     func login(userId:String,password:String){
         //var userId : String = ""
