@@ -99,7 +99,7 @@ class Order:IDisplay {
      */
     static func addOrder(order: Order)
     {
-        dictOrders.updateValue(order, forKey: order.orderId!)
+        dictOrders.updateValue(order, forKey: order.orderId)
     }
     
     static func sortOrderByTotal()
