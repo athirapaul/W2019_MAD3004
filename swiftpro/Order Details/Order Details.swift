@@ -8,12 +8,12 @@
 
 import Foundation
 class OrderDetails{
-private var orderid:Int
- private  var productId:Int
-  private var productName:String
-  private  var quantity: Int
-  private  var unitCost:Float
-  private  var subTotal:Float
+    private var orderid:Int
+    private  var productId:Int
+    private var productName:String
+    private  var quantity: Int
+    private  var unitCost:Float
+    private  var subTotal:Float
     
     init(orderid:Int,productId:Int,productName:String,quantity: Int,unitCost:Float,subTotal:Float){
         self.orderid = orderid
@@ -27,3 +27,4 @@ private var orderid:Int
         subTotal = unitCost * Float(quantity)
     }
 }
+

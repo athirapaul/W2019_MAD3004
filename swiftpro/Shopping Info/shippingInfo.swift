@@ -13,12 +13,13 @@ class shippingInfo{
     private var shippingCost:Int
     private var shippingRegionId:Int
     init(){
-       self.shippingId = Int()
+        self.shippingId = Int()
         self.shippingType = String()
         self.shippingCost = Int()
         self.shippingRegionId = Int()
     }
     func updateShippingInfo(){
-       
+        
     }
 }
+
