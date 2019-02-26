@@ -4,7 +4,6 @@
 //
 //  Created by Athira Paul on 2019-02-14.
 //  Copyright © 2019 Athira Paul. All rights reserved.
-//
 
 import Foundation
 class Customer : User,IDisplay  {
@@ -16,9 +15,7 @@ class Customer : User,IDisplay  {
     var checklogin :String
     var shopObject = [ShoppingCart]()
     var orderObject = [Order]()
-    //var ordersObject = Orders(orderId: <#Int#>, dateCreated: <#String#>, dateShipped: <#String#>, customerId: <#String#>, customerName: <#String#>, status: <#String#>, shippingId: <#String#>)
-    //var shippingObject = [shippingInfo]()
-    //   var orderDetailObject = OrderDetails()
+   
     override init() {
         
         self.customerName = String()
@@ -29,16 +26,7 @@ class Customer : User,IDisplay  {
         self.checklogin  = String()
         super.init()
     }
-    /*init(userId:String,password:String,customerName:String,address:String,email:String,creditCardInfo:String,shippingInfo:String){
-     
-     self.customerName = customerName
-     self.address = address
-     self.email = email
-     self.creditCardInfo = creditCardInfo
-     self.shippingInfo = shippingInfo
-     super.init(userId: userId,password: password,loginStatus: "C")
-     
-     }*/
+    
     func register() {
         print("Welcome to the world of shopping ")
         print("Enter ID")
@@ -59,8 +47,6 @@ class Customer : User,IDisplay  {
         self.creditCardInfo = readLine()!
         print("Enter Shipping Info :")
         self.shippingInfo = readLine()!
-        //print("\(customerName)\(address)\(email)\(creditCardInfo)\(shippingInfo)\nRegistration successful")
-        //self.address = readLine()!
         
     }
     func needtologin() throws{
@@ -88,8 +74,7 @@ class Customer : User,IDisplay  {
         //    if(super.verifyLogin(userID: userId, password: password)){
         if(super.verifyLogin(userId: userId, password: password)){
             print("login successful")
-            // if (Product.init(product1: String, product2: self.product2, product3: self.product3, quantity: self.quantity)){
-            
+           
         }
         else{
             print("login failed")
@@ -108,12 +93,6 @@ class Customer : User,IDisplay  {
         self.shippingInfo = shippingInfo
         
         
-        /* print("Customer name :\(customerName)")
-         print("Address :\(self.address)")
-         print("Email:\(self.email)")
-         print("Credit Card Info :\(self.creditCardInfo)")
-         print("Shipping Info :\(self.shippingInfo)")*/
-        
         
     }
     func display() -> String {
@@ -122,22 +101,25 @@ class Customer : User,IDisplay  {
     }
     func checkOut(){
         //shipdate shipcost shiptype,regionId
-        let tempordObj=Order(orderId: Int.random(in: 1...100), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
+       
+           // var orderidinit = 0
+        let tempordObj=Order(orderId: Int.random(in: 100...150), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
         orderObject.append(tempordObj)
         tempordObj.placeOrder(shopCartObj: h.shopObject)
+       
+        let tempordObj1=Order(orderId: Int.random(in: 1...100), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
+        orderObject.append(tempordObj1)
+        tempordObj1.placeOrder(shopCartObj: h.shopObject)
+    
     }
+
 }
 
 
-/*extension Customer :IDisplay{
- func printMyData() -> String {
- <#code#>
- }
+
  
  
  
- 
- 
- }*/
+
 
 

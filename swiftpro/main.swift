@@ -46,6 +46,10 @@ var s2 = ShoppingCart.init(cartId: Int.random(in: 1...100), productId: p2.produc
 h.shopObject.append(s1)
 h.shopObject.append(s2)
 h.checkOut()
+print("*******NEXT ORDER*******")
+var s3 = ShoppingCart.init(cartId: Int.random(in: 1...100), productId: p3.productId!, quantity: p3.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p3.getProductName!, price: p3.getProductPrice!)
+h.shopObject.append(s3)
+h.checkOut()
 
 
 //var a = Administrator(adminName: "chinnu", email: "chinnu@gmail.com", update: true, adminuserId: "chinnu", adminpassword: "chinnu")
