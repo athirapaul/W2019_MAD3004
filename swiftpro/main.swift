@@ -13,7 +13,12 @@ var p1 = Product.init(productId: 200, productName: "Necklace", price: 20.50, qua
 var p2 = Product.init(productId: 201, productName: "Ring", price: 50.00, quantity: 5)
 var p3 = Product.init(productId: 202, productName: "Anklet", price: 75.25, quantity: 1)
 var p = [p1,p2,p3]
-h.needtologin()
+//do{
+try h.needtologin()
+//}catch(let error)
+//{
+//    print(error)
+//}
 //print(h)
 //var l = Customer(userId: "123", password: "4556", loginStatus: "5678")
 //h.login(userId: "",password: "")
@@ -36,7 +41,12 @@ print(h.display())
  */
 
 var s1 = ShoppingCart.init(cartId:Int.random(in: 1...100), productId: p1.productId!, quantity: p1.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p1.getProductName!, price: p1.getProductPrice!)
+
+var s2 = ShoppingCart.init(cartId: Int.random(in: 1...100), productId: p2.productId!, quantity: p2.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p2.getProductName!, price: p2.getProductPrice!)
 h.shopObject.append(s1)
+h.shopObject.append(s2)
+h.checkOut()
+
 
 //var a = Administrator(adminName: "chinnu", email: "chinnu@gmail.com", update: true, adminuserId: "chinnu", adminpassword: "chinnu")
 

@@ -34,5 +34,8 @@ extension Date
         return formattedDate
     }
 }
+enum exceptionerror : Error {
+    case LoginFail
+}
 
 

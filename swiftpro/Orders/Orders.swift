@@ -75,11 +75,6 @@ class Order:IDisplay {
         //self.arrayProducts = arrayProducts
     }
     
-    func display() -> String {
-        let code = "************************* ORDER DETAILS *********************\nOrder Id is : \(self.orderId)\ndateCreated is : \(self.dateCreated)\ndateShipped is : \(self.dateShipped)\ncustomerId  is : \(self.customerId)\ncustomerName is : \(self.customerName)\nstatus is : \(self.status)\nshippingId is : \(self.shippingId)"
-        return code
-    }
-    
     /*
      
      
@@ -97,8 +92,22 @@ class Order:IDisplay {
      print("Order Total is : \(self.orderTotal.currency())\n\n\n")
      }
      */
-    func placeOrder(){
-        
+    func placeOrder(shopCartObj:[ShoppingCart]){
+        for i in shopCartObj{
+            for j in p{
+                if(i.productId == j.productId){
+                    orderDetailObj.append(OrderDetails(orderid: self.orderId, productId: i.productId!, productName: i.productName!, quantity: i.getProductQuantity!, unitCost:j.getProductPrice!))
+                }
+            }
+        }
+       print(display())
+        print("******OrderDetails are********\nOrderId\t\tProductId\t\tProduct Name\t\tQuantity\t\tUnit Cost\t\tSubtotal")
+        var fintotal:Float=0
+        for i in orderDetailObj{
+            fintotal = fintotal+i.getsubTotal
+            print(i.display())
+            print("Total: \(fintotal)")
+        }
     }
     
     static func sortOrderByTotal()
@@ -113,6 +122,11 @@ class Order:IDisplay {
         }
     }
     
+    func display() -> String {
+        let code = "************************* ORDER DETAILS *********************\nOrder Id is : \(self.orderId)\ndateCreated is : \(self.dateCreated)\ndateShipped is : \(self.dateShipped)\ncustomerId  is : \(self.customerId)\ncustomerName is : \(self.customerName)\nstatus is : \(self.status)\nshippingId is : \(self.shippingId)"
+        return code
+    }
+    
     //GET ORDER DETAILS BY USING ITS ORDER ID
     static func getOrderById(orderId:Int) -> Order? {
         
@@ -123,6 +137,7 @@ class Order:IDisplay {
             return nil
         }
     }
+    
     /*    //REMOVE PRODUCT from Order
      func removeProduct(productId:Int) {
      var arrayNewProducts:[Product] = [Product]()
