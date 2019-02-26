@@ -63,23 +63,25 @@ class Customer : User,IDisplay  {
         //self.address = readLine()!
         
     }
-    func needtologin(){
+    func needtologin() throws{
         print("Do you need to login? ")
         self.checklogin = readLine()!
+        var uid=String()
+        var upass=String()
         if ((checklogin == "YES" ) || (checklogin == "yes")){
             print("Enter user id")
-            self.customerName = readLine()!
+             uid = readLine()!
             
             print("Enter password  :")
-            self.address = readLine()!
+            upass = readLine()!
             
         }
         else{
             print("login failed")
         }
-        
+        try login(userId: uid, password: upass)
     }
-    func login(userId:String,password:String){
+    func login(userId:String,password:String) throws{
         //var userId : String = ""
         //var password :String = ""
         //if(userId == self.user && password == " "){
@@ -91,7 +93,7 @@ class Customer : User,IDisplay  {
         }
         else{
             print("login failed")
-            
+            throw exceptionerror.LoginFail
         }
         
     }
@@ -122,7 +124,7 @@ class Customer : User,IDisplay  {
         //shipdate shipcost shiptype,regionId
         let tempordObj=Order(orderId: Int.random(in: 1...100), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
         orderObject.append(tempordObj)
-        tempordObj.place
+        tempordObj.placeOrder(shopCartObj: h.shopObject)
     }
 }
 
