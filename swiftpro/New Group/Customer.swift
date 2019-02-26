@@ -15,7 +15,7 @@ class Customer : User,IDisplay  {
     var checklogin :String
     var shopObject = [ShoppingCart]()
     var orderObject = [Order]()
-   
+    var ordernum : Int = 1
     override init() {
         
         self.customerName = String()
@@ -24,6 +24,7 @@ class Customer : User,IDisplay  {
         self.creditCardInfo = String()
         self.shippingInfo = String()
         self.checklogin  = String()
+        self.ordernum = 1
         super.init()
     }
     
@@ -49,7 +50,7 @@ class Customer : User,IDisplay  {
         self.shippingInfo = readLine()!
         
     }
-    func needtologin() throws{
+    func needtologin() throws {
         print("Do you need to login? ")
         self.checklogin = readLine()!
         var uid=String()
@@ -60,14 +61,18 @@ class Customer : User,IDisplay  {
             
             print("Enter password  :")
             upass = readLine()!
+           // let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+           
+        
             
         }
+
         else{
             print("login failed")
         }
         try login(userId: uid, password: upass)
     }
-    func login(userId:String,password:String) throws{
+    func login(userId:String,password:String) throws {
         //var userId : String = ""
         //var password :String = ""
         //if(userId == self.user && password == " "){
@@ -99,27 +104,27 @@ class Customer : User,IDisplay  {
         let code="\t\(self.customerName) \t\(self.address)\t \(self.email) \t  \(self.creditCardInfo)  \(self.shippingInfo)"
         return code
     }
-    func checkOut() {
+    func checkOut() -> Int {
         //shipdate shipcost shiptype,regionId
        
-        var tempordObj=Order(orderId: Int.random(in: 100...150), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
+        var tempordObj=Order(orderId: ordernum, dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
         orderObject.append(tempordObj)
         tempordObj.placeOrder(shopCartObj: h.shopObject)
-    
+     
+            ordernum = ordernum + 1
         
-       
-        var temp1 = tempordObj.orderId
-        print("temp1 is \(temp1)")
-   
+           return ordernum
         }
+   
+    }
+
+
+    
     
 
-}
-
-
 
  
- 
+
  
 
 

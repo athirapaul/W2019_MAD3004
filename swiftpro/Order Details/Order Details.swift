@@ -39,6 +39,16 @@ class OrderDetails:IDisplay{
         let code = "\(self.orderid)\t\t\(self.productId)\t\t\(self.productName)\t\t\(self.quantity.unit())\t\t\(self.unitCost.currency())\t\t\(self.subTotal.currency())"
         return code
     }
+    
+    func sorting(){
+        if (orderid > 0){
+           // var sort = sorting()
+            let code1 = "\(self.orderid)\t\t\(self.productId)\t\t\(self.productName)\t\t\(self.quantity.unit())\t\t\(self.unitCost.currency())\t\t\(self.subTotal.currency())"
+            print(code1)
+        }
+    
+    
 }
 
 
+}
