@@ -124,9 +124,6 @@ class Order:IDisplay {
         else {
             return nil
         }
-    func
-        
-    }
     
     /*    //REMOVE PRODUCT from Order
      func removeProduct(productId:Int) {
