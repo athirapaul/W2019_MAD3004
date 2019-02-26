@@ -122,7 +122,7 @@ class Order:IDisplay {
         else {
             return nil
         }
-    
+    }
     /*    //REMOVE PRODUCT from Order
      func removeProduct(productId:Int) {
      var arrayNewProducts:[Product] = [Product]()
