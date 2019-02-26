@@ -41,16 +41,18 @@ print(h.display())
  */
 
 var s1 = ShoppingCart.init(cartId:Int.random(in: 1...100), productId: p1.productId!, quantity: p1.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p1.getProductName!, price: p1.getProductPrice!)
-
+//var s1o1 = 
 var s2 = ShoppingCart.init(cartId: Int.random(in: 1...100), productId: p2.productId!, quantity: p2.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p2.getProductName!, price: p2.getProductPrice!)
 h.shopObject.append(s1)
 h.shopObject.append(s2)
+
 h.checkOut()
 print("*******NEXT ORDER*******")
 var s3 = ShoppingCart.init(cartId: Int.random(in: 1...100), productId: p3.productId!, quantity: p3.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p3.getProductName!, price: p3.getProductPrice!)
 h.shopObject.append(s3)
 h.checkOut()
-
+//images.sorted({ $0.fileID > $1.fileID })
+//sorting
 
 //var a = Administrator(adminName: "chinnu", email: "chinnu@gmail.com", update: true, adminuserId: "chinnu", adminpassword: "chinnu")
 

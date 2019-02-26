@@ -99,19 +99,20 @@ class Customer : User,IDisplay  {
         let code="\t\(self.customerName) \t\(self.address)\t \(self.email) \t  \(self.creditCardInfo)  \(self.shippingInfo)"
         return code
     }
-    func checkOut(){
+    func checkOut() {
         //shipdate shipcost shiptype,regionId
        
-           // var orderidinit = 0
-        let tempordObj=Order(orderId: Int.random(in: 100...150), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
+        var tempordObj=Order(orderId: Int.random(in: 100...150), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
         orderObject.append(tempordObj)
         tempordObj.placeOrder(shopCartObj: h.shopObject)
-       
-        let tempordObj1=Order(orderId: Int.random(in: 1...100), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
-        orderObject.append(tempordObj1)
-        tempordObj1.placeOrder(shopCartObj: h.shopObject)
     
-    }
+        
+       
+        var temp1 = tempordObj.orderId
+        print("temp1 is \(temp1)")
+   
+        }
+    
 
 }
 
