@@ -15,6 +15,7 @@ class Customer : User,IDisplay  {
     private var shippingInfo : String
     var checklogin :String
     var shopObject = [ShoppingCart]()
+    var orderObject = [Order]()
     //var ordersObject = Orders(orderId: <#Int#>, dateCreated: <#String#>, dateShipped: <#String#>, customerId: <#String#>, customerName: <#String#>, status: <#String#>, shippingId: <#String#>)
     //var shippingObject = [shippingInfo]()
     //   var orderDetailObject = OrderDetails()
@@ -117,7 +118,12 @@ class Customer : User,IDisplay  {
         let code="\t\(self.customerName) \t\(self.address)\t \(self.email) \t  \(self.creditCardInfo)  \(self.shippingInfo)"
         return code
     }
-    
+    func checkOut(){
+        //shipdate shipcost shiptype,regionId
+        let tempordObj=Order(orderId: Int.random(in: 1...100), dateCreated: Date().getForamttedDate(), dateShipped: Date().getForamttedDate(), customerName: self.customerName, customerId: Int.random(in: 1...100), status: "Placed", shippingId: Int.random(in: 1...100))
+        orderObject.append(tempordObj)
+        tempordObj.place
+    }
 }
 
 
@@ -131,4 +137,5 @@ class Customer : User,IDisplay  {
  
  
  }*/
+
 

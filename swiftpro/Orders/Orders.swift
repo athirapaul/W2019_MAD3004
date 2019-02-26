@@ -37,8 +37,8 @@ class Order:IDisplay {
     
     
     var orderId:Int
-    private   var dateCreated:Date
-    private  var dateShipped:Date
+    private   var dateCreated:String
+    private  var dateShipped:String
     private  var customerName:String
     private   var customerId:Int
     private  var status:String
@@ -58,15 +58,15 @@ class Order:IDisplay {
     init()
     {
         self.orderId = Int()
-        self.dateCreated = Date()
-        self.dateShipped = Date()
+        self.dateCreated = String()
+        self.dateShipped = String()
         self.customerId = Int()
         self.customerName  = String()
         self.status = String()
         self.shippingId = Int()
-        self.arrayProducts = [Product]()
+        //self.arrayProducts = [Product]()
     }
-    init(orderId:Int,dateCreated: Date,dateShipped:Date,customerName:String,customerId:Int,status:String,shippingId:Int,arrayProducts:[Product]) {
+    init(orderId:Int,dateCreated: String,dateShipped:String,customerName:String,customerId:Int,status:String,shippingId:Int) {
         self.orderId = orderId
         self.dateCreated = dateCreated
         self.dateShipped = dateShipped
@@ -74,11 +74,11 @@ class Order:IDisplay {
         self.customerName  = customerName
         self.status = status
         self.shippingId = shippingId
-        self.arrayProducts = arrayProducts
+        //self.arrayProducts = arrayProducts
     }
     
     func display() -> String {
-        let code = "************************* ORDER DETAILS *********************\nOrder Id is : \(self.orderId)\ndateCreated is : \(self.dateCreated.getForamttedDate())\ndateShipped is : \(self.dateShipped.getForamttedDate())\ncustomerId  is : \(self.customerId)\ncustomerName is : \(self.customerName)\nstatus is : \(self.status)\nshippingId is : \(self.shippingId)\narrayProducts is : \(self.arrayProducts)"
+        let code = "************************* ORDER DETAILS *********************\nOrder Id is : \(self.orderId)\ndateCreated is : \(self.dateCreated)\ndateShipped is : \(self.dateShipped)\ncustomerId  is : \(self.customerId)\ncustomerName is : \(self.customerName)\nstatus is : \(self.status)\nshippingId is : \(self.shippingId)"
         return code
     }
     
@@ -99,9 +99,8 @@ class Order:IDisplay {
      print("Order Total is : \(self.orderTotal.currency())\n\n\n")
      }
      */
-    static func addOrder(order: Order)
-    {
-        dictOrders.updateValue(order, forKey: order.orderId!)
+    func placeOrder(){
+        
     }
     
     static func sortOrderByTotal()
@@ -112,7 +111,7 @@ class Order:IDisplay {
         
         for o in newOrders
         {
-            o.value.display()
+            print(o.value.display())
         }
     }
     
@@ -125,18 +124,20 @@ class Order:IDisplay {
         else {
             return nil
         }
+    func
         
     }
     
-    //REMOVE PRODUCT from Order
-    func removeProduct(productId:Int) {
-        var arrayNewProducts:[Product] = [Product]()
-        for product in self.arrayProducts {
-            if product.productId != productId {
-                arrayNewProducts.append(product)
-            }
-        }
-        self.arrayProducts = arrayNewProducts
-    }
+    /*    //REMOVE PRODUCT from Order
+     func removeProduct(productId:Int) {
+     var arrayNewProducts:[Product] = [Product]()
+     for product in self.arrayProducts {
+     if product.productId != productId {
+     arrayNewProducts.append(product)
+     }
+     }
+     self.arrayProducts = arrayNewProducts
+     }*/
 }
+
 

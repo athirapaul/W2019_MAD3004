@@ -21,19 +21,24 @@ h.needtologin()
 //h.login(userId: "",password: "")
 print("details before updation")
 print(h.display())
-//////UPDATE PROFILE
-print("Updation(enter new/old info)\nEnter Name")
-let name=readLine()!
-print("Enter address")
-let address=readLine()!
-print("Enter email")
-let email=readLine()!
-print("Enter credit card info")
-let credinfo=readLine()!
-print("Shipping info")
-let shipinfo=readLine()!
-h.updateProfile(customerName: name, address: address, email: email, creditCardInfo: credinfo, shippingInfo: shipinfo)
-print(h.display())
+/*
+ //////UPDATE PROFILE
+ print("Updation(enter new/old info)\nEnter Name")
+ let name=readLine()!
+ print("Enter address")
+ let address=readLine()!
+ print("Enter email")
+ let email=readLine()!
+ print("Enter credit card info")
+ let credinfo=readLine()!
+ print("Shipping info")
+ let shipinfo=readLine()!
+ h.updateProfile(customerName: name, address: address, email: email, creditCardInfo: credinfo, shippingInfo: shipinfo)
+ print(h.display())
+ */
+
+var s1 = ShoppingCart.init(cartId:Int.random(in: 1...100), productId: p1.productId!, quantity: p1.getProductQuantity!, dateAdded: Date().getForamttedDate(), productName: p1.getProductName!, price: p1.getProductPrice!)
+h.shopObject.append(s1)
 
 //var a = Administrator(adminName: "chinnu", email: "chinnu@gmail.com", update: true, adminuserId: "chinnu", adminpassword: "chinnu")
 
@@ -43,7 +48,8 @@ print(h.display())
 //p.chooseProduct(Product1: "Anklet")
 //print(p)
 
-var o1 = Order.init(orderId: 1, dateCreated: Date(), dateShipped: Date(), customerName: h.customerName, customerId: 1, status: "order placed", shippingId: 1, arrayProducts: [p1,p2,p3])
-print(o1.display())
+//var o1 = Order.init(orderId: 1, dateCreated: Date(), dateShipped: Date(), customerName: h.customerName, customerId: 1, status: "order placed", shippingId: 1)
+//print(o1.display())
 //qqvar o2 = Order.init(orderId: <#T##Int#>, dateCreated: <#T##Date#>, dateShipped: <#T##Date#>, customerName: <#T##String#>, customerId: <#T##String#>, status: <#T##String#>, shippingId: <#T##String#>, arrayProducts: <#T##[Product]#>)
+
 

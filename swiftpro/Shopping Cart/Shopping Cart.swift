@@ -11,8 +11,8 @@ class ShoppingCart : Product {
     private var cartId :Int
     //    private var productId :Int
     //private  var quantity:Int
-    private   var dateAdded:Int
-    init(cartId:Int,productId:Int,quantity:Int,dateAdded:Int,productName:String,price:Float){
+    private   var dateAdded:String
+    init(cartId:Int,productId:Int,quantity:Int,dateAdded:String,productName:String,price:Float){
         self.cartId = cartId
         //self.productId = Int()
         //self.quantity = Int()
@@ -32,9 +32,6 @@ class ShoppingCart : Product {
     func viewCartDetails(){
         
     }
-    func checkOut(){
-        
-    }
-    
 }
+
 
